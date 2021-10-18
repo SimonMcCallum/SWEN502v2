@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SWEN502 edit</string>
+    <string name="title_home">My home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="button_name">Click me!</string>
+    <string name="instruction1">We automatically keep track of your location, using GPS and low energy Bluetooth, so that we can alert you if you’ve been in contact with anyone who’s since tested positive for COVID-19.</string>
+    <string name="instruction2">If you develop symptoms of COVID-19 you can add them with our symptom tracker. We assess the likelihood of whether you’ve got it.</string>
+    <string name="instruction3">You can also add test results if you test positively or negatively for having had the virus.</string>
+    <string name="instruct1">We automatically keep track of your location, using GPS and low energy Bluetooth, so that we can alert you if you’ve been in contact with anyone who’s since tested positive for COVID-19.</string>
+    <string name="icon_for_instruction">icon for instruction</string>
+</resources>
