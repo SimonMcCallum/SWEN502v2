@@ -1,5 +1,9 @@
 package nz.ac.wgtn.ecs.swen502v2;
 
+import android.content.Context;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,6 +16,8 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+
+import java.util.Locale;
 
 import nz.ac.wgtn.ecs.swen502v2.databinding.ActivityMainBinding;
 
@@ -59,5 +65,23 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
+    }
+
+
+    private static void updateResources(Context context, String language) {
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+
+        Resources resources = context.getResources();
+
+        Configuration configuration = resources.getConfiguration();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            configuration.setLocale(locale);
+        } else {
+            configuration.locale = locale;
+        }
+
+        resources.updateConfiguration(configuration, resources.getDisplayMetrics());
     }
 }
